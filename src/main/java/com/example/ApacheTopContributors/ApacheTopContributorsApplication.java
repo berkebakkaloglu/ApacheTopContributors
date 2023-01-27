@@ -20,7 +20,6 @@ public class ApacheTopContributorsApplication {
 	@Bean
 	public CommandLineRunner run(RestTemplate restTemplate) {
 		return args -> {
-
 			List<TotalUserData> totalUserDataList = getContributors(restTemplate);
 			getUsers(restTemplate, totalUserDataList);
 			String output = generateOutput(totalUserDataList);
